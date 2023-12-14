@@ -4,20 +4,20 @@ body{
     line-height: 1.4;
     color: rgb(72, 72, 72);
 }
- a div img{
+.personaje div img{
     width: 300px;
     height: 300px;
 }
-a h3{
+.personaje h3{
     padding-left: 10px;
     padding-top: 10px;
 }
-a h3:after{
+.personaje h3:after{
     content: 'TM';
     vertical-align: super;
     font-size: 12px;
 }
-section{
+.Characters{
     padding-top:48 px;
     padding-bottom: 48px;
 }
@@ -33,20 +33,25 @@ section{
     width: 80%;
     display: flex;
     flex-wrap: wrap;
+    height: auto;
     padding-left: 15%;
+    padding-bottom: 5%;
     overflow: visible;
-    gap: 10px;
+    gap: 15px;
 }
-div{
+a div{
     width: 300px;
     height: 300px;
     overflow: hidden;
-    border-radius: 15%;
+    border-radius: 5%;
 }
-section h2{
+.Characters{
+    height: 30%;
+}
+.Characters h2{
     margin-left: 15%;
 }
-h3{
+.tcaracter{
     margin-top: 305px;
     margin-left: 2px;
 }
@@ -67,5 +72,39 @@ a:hover .caracter{
     transform: scale(1.125);
     transition: 0.5s;
 }
-
+.BestSellers{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 15%;
+}
+.DigitalBestSellers{
+    padding-left: 20px;
+}
+.card{
+    width: 262px;
+    height: 316.25px;
+    border-radius: 5%;
+    cursor: pointer;
+    border-left: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+}
+.card:hover h3{
+    color: red;
+    transition: 0.5s;
+}
+.card:hover .juego{
+    transform: translateY(-20px);
+    transition: 0.7s;
+}
+.juego{
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+}
+.card img{
+    width:262px;
+    height: 147.25px;
+    
+}
 
