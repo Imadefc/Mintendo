@@ -1,110 +1,162 @@
+@import url(tipografia.css);
+:root{
+    --radio-borde:0.75rem;
+    --radio-borde-pequeño:0.5rem;
+    --color-rojo:rgb(230, 0, 18);
+    --color-gris-claro:rgb(200, 198, 198);
+    --color-letra: rgb(72, 72, 72) ;
+}
 body{
     font-family: museo-sans, -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 16px;
+    width: 100%;
     line-height: 1.4;
     color: rgb(72, 72, 72);
+    -webkit-font-smoothing: antialiased;
 }
-.personaje div img{
-    width: 300px;
-    height: 300px;
+*,::after,::before{
+    box-sizing: border-box;
 }
-.personaje h3{
-    padding-left: 10px;
-    padding-top: 10px;
-}
-.personaje h3:after{
-    content: 'TM';
-    vertical-align: super;
-    font-size: 12px;
-}
-.Characters{
-    padding-top:48 px;
-    padding-bottom: 48px;
-}
-.personaje{
-
-    
-    width: 300px;
-    height: 300px; 
-    margin-bottom: 50px;
-    cursor: pointer;
-}
-.personajes{
-    width: 80%;
+.digitalHeader{
+    width: 100vw;
     display: flex;
-    flex-wrap: wrap;
-    height: auto;
-    padding-left: 15%;
-    padding-bottom: 5%;
-    overflow: visible;
-    gap: 15px;
+    flex-direction: row;
 }
-a div{
-    width: 300px;
-    height: 300px;
+.dbs{
+    font-weight: 700;
+    line-height: 1.35;
+    font-size: 1.3125rem;
+    padding-right:16px;
+    border-right: 1px solid var(--color-gris-claro);
+}
+.seefullList{
+    text-decoration: none;
+    color: var(--color-rojo);
+    align-self: center;
+    margin-left: 16px;
+    font-weight: bolder;
+    border-bottom: 2px solid var(--color-rojo);
+}
+.digitalHeader , .contenedorDigital{
+    width: 96%;
+    max-width: 71.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.digitalNewReleases{
+    margin-bottom: 32px;
+    display: flex;
     overflow: hidden;
-    border-radius: 5%;
-}
-.Characters{
-    height: 30%;
-}
-.Characters h2{
-    margin-left: 15%;
-}
-.tcaracter{
-    margin-top: 305px;
-    margin-left: 2px;
-}
-.ay{
-    position: absolute;
-}
-.bg{
-    position: absolute;
-}
-.fondo{
-    transform: scale(1.125);
-}
-a:hover .fondo{
-    transform: scale(1);
-    transition: 0.5s;
-}
-a:hover .caracter{
-    transform: scale(1.125);
-    transition: 0.5s;
-}
-.BestSellers{
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 15%;
-}
-.DigitalBestSellers{
-    padding-left: 20px;
-}
-.card{
-    width: 262px;
-    height: 316.25px;
-    border-radius: 5%;
-    cursor: pointer;
-    border-left: 1px solid lightgrey;
-    border-right: 1px solid lightgrey;
-    border-bottom: 1px solid lightgrey;
-}
-.card:hover h3{
-    color: red;
-    transition: 0.5s;
-}
-.card:hover .juego{
-    transform: translateY(-20px);
-    transition: 0.7s;
-}
-.juego{
-    border-top-left-radius: 5%;
-    border-top-right-radius: 5%;
-}
-.card img{
-    width:262px;
-    height: 147.25px;
     
 }
+.juegoDigital{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    min-width: 208px;
+    max-width: 268px;
+    margin: 1.5rem 1rem;
+    border-radius:var(--radio-borde);
+    border-bottom: 1px solid var(--color-gris-claro) ;
+    border-right: 1px solid var(--color-gris-claro);
+    border-left: 1px solid var(--color-gris-claro);
 
+}
+.juegoImagen{
+    width: 100%;
+    border-top-right-radius: var(--radio-borde);
+    border-top-left-radius:var(--radio-borde) ;
+    transition: transform 0.3s;
+}
+.juegoDigital:hover .juegoImagen{
+    transform: translateY(-1rem);
+}
+.tituloJuegoDigital{
+    font-weight: 700;
+    margin: 0;
+    font-size: 0.875rem;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    transition: 0.3s;
+}
+.juegoDigital:hover .tituloJuegoDigital{
+    color: var(--color-rojo);
+}
+
+.fechaJuegoDigital{
+    color:var(--color-gris-claro) ;
+    padding-left: 16px;
+    font-size: 0.75rem;
+    margin: 0;
+    margin-top: 0.25rem;
+    
+}
+.precioJuegoDigital{
+    padding-left: 16px;
+    font-weight: bolder;
+}
+
+.finalJuegoDigital{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.plataformaJuegoDigital{
+    margin-left: 16px;
+    padding-left: 1ch;
+    border-left: 2px solid var(--color-rojo);
+}
+.svgCorazonDigital{
+    width: 3em;
+    height: 3em;
+    color: var(--color-rojo);
+    padding-right: 16px;
+}
+.botonDerecho{
+    position: relative;
+    height: 100%;
+    cursor: pointer;
+    padding: 16px;
+    border: 0;
+    right: 68px;
+    background: rgba(0, 0, 0, 0.3);
+    color: rgb(218, 218, 218);
+    border-radius:var(--radio-borde-pequeño) ;
+}
+
+
+@media(min-width:768px){
+    
+}
+@media(min-width:1025px){
+    :root{
+        --radio-borde:1rem;
+    }
+}
+@media (min-width:429px){
+   .tituloJuegoDigital{
+        font-size: 1rem;
+        margin: 0px;
+        text-align: initial;
+        padding-right: 1rem;
+   }
+   .juegoDigital{
+        max-width: 16.375rem;
+        width: calc((100% - 1rem) / 3.5);
+   }
+   .dbs{
+        text-align: initial;
+        font-size: 1.75rem;
+   }
+   .seefullList{
+        text-align: initial;
+   }
+
+}
+@supports (aspect-ratio:16/9){
+
+}
