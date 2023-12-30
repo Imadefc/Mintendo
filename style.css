@@ -14,9 +14,7 @@ body{
     color: rgb(72, 72, 72);
     -webkit-font-smoothing: antialiased;
 }
-*,::after,::before{
-    box-sizing: border-box;
-}
+
 .digitalHeader{
     width: 100vw;
     display: flex;
@@ -39,11 +37,13 @@ body{
 }
 .digitalHeader , .contenedorDigital{
     width: 96%;
+    overflow: hidden;
     max-width: 71.5rem;
     margin-left: auto;
     margin-right: auto;
 }
 .digitalNewReleases{
+    width: 120%;
     margin-bottom: 32px;
     display: flex;
     overflow: hidden;
@@ -122,10 +122,19 @@ body{
     cursor: pointer;
     padding: 16px;
     border: 0;
-    right: 68px;
+    right: 110px;
     background: rgba(0, 0, 0, 0.3);
     color: rgb(218, 218, 218);
     border-radius:var(--radio-borde-pequeño) ;
+}
+.etiquetaJuego{
+    font-weight: 700;
+    background-color:rgb(149, 49, 185) ;
+    color: white;
+    margin-left: 16px;
+    border-radius: var(--radio-borde);
+    font-size: 0.75rem;
+    padding: 3px;
 }
 
 
