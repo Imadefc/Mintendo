@@ -19,12 +19,14 @@ body{
 .digitalHeader{
     width: 100vw;
     display: flex;
+    padding-top: 48px;
     flex-direction: row;
 }
 .dbs{
     font-weight: 700;
     line-height: 1.35;
-    font-size: 1.3125rem;
+    font-size: 1.75rem;
+    padding: 0px;
     padding-right:16px;
     border-right: 1px solid var(--color-gris-claro);
 }
@@ -48,6 +50,9 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
+.contenedorDigital{
+    margin-bottom: 2rem;
+}
 .digitalNewReleases{
     width: 120%;
     margin-bottom: 32px;
@@ -63,6 +68,7 @@ body{
     min-width: 208px;
     max-width: 268px;
     margin: 1.5rem 1rem;
+    width: calc((100% - 1rem) / 3.5);
     border-radius:var(--radio-borde);
     border-bottom: 1px solid lightgray ;
     border-right: 1px solid lightgray;
@@ -207,12 +213,59 @@ body{
 }
 
 
-@media(min-width:768px){
-    
-}
+
 @media(min-width:1025px){
     :root{
         --radio-borde:1rem;
+    }
+}
+@media(max-width:1025px){
+    .juegoDigital{
+        width: calc((100% - 1rem) / 2.5);
+    }
+}
+@media(max-width:1210px){
+    .botonDerecho{
+        position: absolute;
+        height: 420px;
+        right: 12px;
+    }
+}
+@media(max-width:768px){
+    .digitalHeader{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        scroll-margin-top: 120px;
+    }
+    .digitalHeader , .contenedorDigital, .footerDigitalJuegos{
+        max-width: 71.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .juegoDigital{
+        width: calc((100% - 1rem) / 1.5);
+    }
+    
+}
+@media(max-width:854px){
+    .botonDerecho{
+        position: absolute;
+        height: 420px;
+        right: 5px;
+    }
+}
+@media(max-width:429px){
+    .botonDerecho{
+        position: absolute;
+        height: 420px;
+        right: 0px;
+    }
+    .digitalHeader{
+        display: block;
+    }
+    .dbs{
+        margin-left: 16px;
+        font-size: 1.3125rem;
     }
 }
 @media (min-width:429px){
@@ -222,17 +275,7 @@ body{
         text-align: initial;
         padding-right: 1rem;
    }
-   .juegoDigital{
-        max-width: 16.375rem;
-        width: calc((100% - 1rem) / 3.5);
-   }
-   .dbs{
-        text-align: initial;
-        font-size: 1.75rem;
-   }
-   .seefullList{
-        text-align: initial;
-   }
+   
 
 }
 @supports (aspect-ratio:16/9){
