@@ -3,7 +3,8 @@
     --radio-borde:0.75rem;
     --radio-borde-pequeño:0.5rem;
     --color-rojo:rgb(230, 0, 18);
-    --color-gris-claro:rgb(200, 198, 198);
+    --color-rojo-oscuro:#ac000d;
+    --color-gris-claro:rgb(132, 132, 132);
     --color-letra: rgb(72, 72, 72) ;
 }
 body{
@@ -34,8 +35,13 @@ body{
     margin-left: 16px;
     font-weight: bolder;
     border-bottom: 2px solid var(--color-rojo);
+    transition: 0.3s;
 }
-.digitalHeader , .contenedorDigital{
+.seefullList:hover{
+    color: var(--color-rojo-oscuro);
+    border-bottom: 2px solid var(--color-rojo-oscuro);
+}
+.digitalHeader , .contenedorDigital, .footerDigitalJuegos{
     width: 96%;
     overflow: hidden;
     max-width: 71.5rem;
@@ -51,7 +57,6 @@ body{
 }
 .juegoDigital{
     display: flex;
-    flex-wrap: nowrap;
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
@@ -59,9 +64,9 @@ body{
     max-width: 268px;
     margin: 1.5rem 1rem;
     border-radius:var(--radio-borde);
-    border-bottom: 1px solid var(--color-gris-claro) ;
-    border-right: 1px solid var(--color-gris-claro);
-    border-left: 1px solid var(--color-gris-claro);
+    border-bottom: 1px solid lightgray ;
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
 
 }
 .juegoImagen{
@@ -87,6 +92,8 @@ body{
 }
 
 .fechaJuegoDigital{
+    padding-top: 16px;
+    height: 2rem;
     color:var(--color-gris-claro) ;
     padding-left: 16px;
     font-size: 0.75rem;
@@ -126,6 +133,14 @@ body{
     background: rgba(0, 0, 0, 0.3);
     color: rgb(218, 218, 218);
     border-radius:var(--radio-borde-pequeño) ;
+    transition: transform 0.3s;
+}
+.botonDerecho:hover{
+    background: rgba(0, 0, 0, 0.6);
+}
+.botonDerecho:hover svg{
+    color: white;
+    transform: scale(1.15);
 }
 .etiquetaJuego{
     font-weight: 700;
@@ -135,6 +150,60 @@ body{
     border-radius: var(--radio-borde);
     font-size: 0.75rem;
     padding: 3px;
+}
+
+.sparks{
+    opacity: 0;
+    transition-timing-function: ease;
+}
+
+.heart-filled{
+    opacity: 0;
+}
+
+.svgCorazonDigital:hover .sparks{
+    animation: sparksAnimation 1s;
+    color: var(--color-rojo-oscuro);
+    
+    
+}
+.svgCorazonDigital:hover .heart-outline{
+    color: var(--color-rojo-oscuro);
+}
+@keyframes sparksAnimation {
+    from{
+        opacity: 0;
+    }
+    75%{
+        opacity: 1;
+        stroke-dasharray: 8;
+        stroke-dashoffset: 24;  
+    }
+    to{
+        opacity: 1;
+        
+    }
+}
+.footerDigitalJuegos{
+    margin-bottom: 64px;
+}
+
+.textoFooterDigitalJuegos{
+    font-size: 0.75rem;
+    color: var(--color-gris-claro);
+    font-weight: 300;
+}
+.enlaceEnFooterDigitalJuegos{
+    text-decoration: none;
+    color: var(--color-rojo);
+    font-weight: 700;
+    border-bottom: 2px solid var(--color-rojo);
+    transition:0.3s;
+    
+}
+.enlaceEnFooterDigitalJuegos:hover{
+    color: var(--color-rojo-oscuro);
+    border-bottom: 2px solid var(--color-rojo-oscuro);
 }
 
 
