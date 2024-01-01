@@ -15,54 +15,41 @@ body{
     color: rgb(72, 72, 72);
     -webkit-font-smoothing: antialiased;
 }
-
-.digitalHeader{
-    width: 100vw;
-    display: flex;
-    padding-top: 48px;
-    flex-direction: row;
+.contenedorEtiqueta{
+    padding-left: 1rem;
+    margin-bottom: 8px;
 }
-.dbs{
-    font-weight: 700;
-    line-height: 1.35;
-    font-size: 1.75rem;
-    padding: 0px;
-    padding-right:16px;
-    border-right: 1px rgba(114, 114, 114, 0.5) solid;
+.contenedorFeatured{
+    width: 99%;
+    overflow: hidden;
 }
-#dnr{
-    padding-top: 0px;
-}
-.seefullList{
-    text-decoration: none;
-    color: var(--color-rojo);
-    align-self: center;
+.plataformaJuegoDigital{
     margin-left: 16px;
-    font-weight: bolder;
-    border-bottom: 2px solid var(--color-rojo);
-    transition: 0.3s;
+    padding-left: 1ch;
+    color: var(--color-gris-claro);
+    font-size: 0.625rem;
+    font-weight: 300;
+    border-left: 2px solid var(--color-rojo);
+    margin-top: 0px;
 }
-.seefullList:hover{
-    color: var(--color-rojo-oscuro);
-    border-bottom: 2px solid var(--color-rojo-oscuro);
-}
-.digitalHeader , .contenedorDigital, .footerDigitalJuegos{
-    width: 96%;
-    overflow: hidden;
-    max-width: 71.5rem;
-    margin-left: auto;
-    margin-right: auto;
-}
-.contenedorDigital{
-    margin-bottom: 2rem;
-}
-.digitalNewReleases{
-    width: 120%;
-    display: flex;
-    overflow: hidden;
+.juegoImagen{
+    width: 100%;
+    border-top: 1px solid lightgray;
     
+    border-top-right-radius: var(--radio-borde);
+    border-top-left-radius:var(--radio-borde) ;
+    transition: transform 0.3s;
 }
-.juegoDigital{
+.cartaProducto:hover .juegoImagen{
+    transform: translateY(-1rem);
+}
+.contenedorProducto{
+    display: flex;
+    flex-direction: row;
+    width: 130%;
+}
+
+.cartaProducto{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -74,18 +61,18 @@ body{
     border-bottom: 1px solid lightgray ;
     border-right: 1px solid lightgray;
     border-left: 1px solid lightgray;
+    transition: all 0.3s;
 
 }
-.juegoImagen{
-    width: 100%;
-    border-top-right-radius: var(--radio-borde);
-    border-top-left-radius:var(--radio-borde) ;
-    transition: transform 0.3s;
+.dbs{
+    font-weight: 700;
+    line-height: 1.35;
+    font-size: 1.75rem;
 }
-.juegoDigital:hover .juegoImagen{
-    transform: translateY(-1rem);
+.cartaProducto:hover .tituloFeatured{
+    color: var(--color-rojo);
 }
-.tituloJuegoDigital{
+.tituloFeatured{
     font-weight: 700;
     margin: 0;
     font-size: 0.875rem;
@@ -93,231 +80,45 @@ body{
     padding-left: 1rem;
     padding-right: 16px;
     transition: 0.3s;
+    padding-bottom: 1rem;
 }
-.juegoDigital:hover .tituloJuegoDigital{
-    color: var(--color-rojo);
+#NewsAndEvents{
+    border: none;
 }
-
-.fechaJuegoDigital{
-    color:var(--color-gris-claro) ;
-    padding-left: 1rem;
-    font-size: 0.625rem;
-    margin: 0;
-    margin-bottom: 1rem;
-    
+#hardware{
+    border-left: 2px solid var(--color-gris-claro);
 }
-.precioJuegoDigital{
-    padding-left: 1rem;
-    font-weight: bolder;
-    margin: 0px;
-    font-size: 1rem;
-}
-.precioYDisponibilidad{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-}
-.contenedorEtiquetaJuego{
-    margin: 0;
-    margin-bottom: 4px;
-}
-
-.finalJuegoDigital{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-}
-.plataformaJuegoDigital{
-    margin-left: 16px;
-    padding-left: 1ch;
-    color: var(--color-gris-claro);
-    font-size: 0.625rem;
-    font-weight: 300;
-    border-left: 2px solid var(--color-rojo);
-}
-.svgCorazonDigital{
-    width: 3em;
-    height: 3em;
-    color: var(--color-rojo);
-    padding-right: 16px;
-}
-.botonDerecho{
-    position: relative;
-    height: 100%;
-    cursor: pointer;
-    padding: 16px;
-    border: 0;
-    right: 108px;
-    background: rgba(0, 0, 0, 0.3);
-    color: rgb(218, 218, 218);
-    border-radius:var(--radio-borde-pequeño) ;
-    transition: transform 0.3s;
-}
-.botonDerecho:hover{
-    background: rgba(0, 0, 0, 0.6);
-}
-.botonDerecho:hover svg{
+.EtiquetaEstado{
+    background-color: var(--color-rojo);
     color: white;
-    transform: scale(1.15);
-}
-.etiquetaJuego{
-    font-weight: 700;
-    background-color:rgb(149, 49, 185) ;
-    color: white;
-    margin-left: 16px;
-    border-radius: var(--radio-borde);
-    font-size: 0.75rem;
+    border-radius:var(--radio-borde) ;
     padding: 3px;
-}
-
-.sparks{
-    opacity: 0;
-    transition-timing-function: ease;
-}
-
-.heart-filled{
-    opacity: 0;
-}
-
-.svgCorazonDigital:hover .sparks{
-    animation: sparksAnimation 1s;
-    color: var(--color-rojo-oscuro);
-    
-    
-}
-.svgCorazonDigital:hover .heart-outline{
-    color: var(--color-rojo-oscuro);
-}
-@keyframes sparksAnimation {
-    from{
-        opacity: 0;
-    }
-    75%{
-        opacity: 1;
-        stroke-dasharray: 8;
-        stroke-dashoffset: 24;  
-    }
-    to{
-        opacity: 1;
-        
-    }
-}
-.footerDigitalJuegos{
-    margin-bottom: 64px;
-}
-
-.textoFooterDigitalJuegos{
-    font-size: 0.75rem;
-    color: var(--color-gris-claro);
-    font-weight: 300;
-}
-.enlaceEnFooterDigitalJuegos{
-    text-decoration: none;
-    color: var(--color-rojo);
     font-weight: 700;
-    border-bottom: 2px solid var(--color-rojo);
-    transition:0.3s;
-    
+    font-size: 0.75rem;
 }
-.enlaceEnFooterDigitalJuegos:hover{
-    color: var(--color-rojo-oscuro);
-    border-bottom: 2px solid var(--color-rojo-oscuro);
+#LearnMore{
+   background-color: rgb(75, 92, 206); 
 }
 
+#freeDownloadMorado{
+    background-color: rgb(149, 49, 185);;
+}
 
-
-@media(min-width:1025px){
-    :root{
-        --radio-borde:1rem;
-    }
-}
-@media(max-width:1025px){
-    
-}
-@media(max-width:1210px){
-    .botonDerecho{
-        position: absolute;
-        height: 420px;
-        right: 12px;
-    }
-}
-@media(max-width:768px){
-    .digitalHeader{
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        scroll-margin-top: 120px;
-    }
-    .digitalHeader , .contenedorDigital, .footerDigitalJuegos{
-        max-width: 71.5rem;
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-    
-    
-}
-@media(max-width:854px){
-    .botonDerecho{
-        position: absolute;
-        height: 420px;
-        right: 5px;
-    }
-}
-@media(max-width:429px){
-    .botonDerecho{
-        position: absolute;
-        height: 420px;
-        right: 0px;
-    }
-    .digitalHeader{
-        display: block;
-    }
-    .dbs{
-        margin-left: 16px;
-        font-size: 1.3125rem;
-    }
-}
 @media (min-width:429px){
-    .tituloJuegoDigital{
+    .cartaProducto{
+        width: calc((100% - 1rem) / 1.5);
+    }
+    .tituloFeatured{
          font-size: 1rem;
          margin: 0px;
          text-align: initial;
          padding-right: 1rem;
     }
-    .juegoDigital{
-     width: calc((100% ) / 1.5) ;
-    }
-    .fechaJuegoDigital{
-        margin-top: 0.25rem;
-        font-size: 0.75rem;
-    }
     .plataformaJuegoDigital{
         font-size: 0.875rem;
     }
-    .etiquetaJuego{
-        margin-bottom: 16px;
+    .dbs{
+        margin-left: 16px;
+        font-size: 1.3125rem;
     }
-    .contenedorEtiquetaJuego{
-        margin-bottom: 8px;
-    }
-    
- 
- }
-@media (min-width: 768px){
-    .juegoDigital{
-        width: calc((100% ) / 2.5);
-    }
-    
-}
-@media (min-width: 1025px){
-    .juegoDigital{
-        width: calc((100% ) / 3.5);
-    }
-    
-}
-
-
-@supports (aspect-ratio:16/9){
-
 }
