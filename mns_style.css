@@ -1,16 +1,26 @@
 body {
-    border: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
     color: rgb(67, 67, 67);
 }
 
 .OnlineStore {
     display: flex;
     justify-content: center;
+    max-width: 70%;
+}
+
+.NintendoStore {
+
 }
 
 .MyNintendoStoreDesktopImage {
     border-radius: 8px;
+}
+
+.OnlineStoreDescription {
+
 }
 
 .StartShoppingButton {
@@ -19,7 +29,6 @@ body {
     background-color: #E60012;
     justify-content: center;
     padding: 10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration: none;
     font-weight: bold;
     color: white;
