@@ -1,20 +1,19 @@
-@font-face {
-    font-family: sans-serif;
-    font-style: normal;
-    src: local(''), url(Fonts/MuseoSans_700.ttf);
-}
+@import url(tipografía.css);
 
 body {
     padding: 0px;
     margin: 0px;
     width: 100%;
     color: rgb(67, 67, 67);
+    font-family: var(--nintendo-font);
+    font-weight: var(--font-weight-nintendo);
+    font-size: var(--font-size-text);
+    line-height: var(--line-text);
 }
 
 .OnlineStore {
     display: flex;
     justify-content: center;
-    max-width: 70%;
 }
 
 .NintendoStore {
