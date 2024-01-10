@@ -1,3 +1,9 @@
+@font-face {
+    font-family: sans-serif;
+    font-style: normal;
+    src: local(''), url(Fonts/MuseoSans_700.ttf);
+}
+
 body {
     padding: 0px;
     margin: 0px;
