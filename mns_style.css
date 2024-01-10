@@ -4,7 +4,7 @@ body {
     padding: 0px;
     margin: 0px;
     width: 100%;
-    color: rgb(67, 67, 67);
+    color: rgb(72, 72, 72);
     font-family: var(--nintendo-font);
     font-weight: var(--font-weight-nintendo);
     font-size: var(--font-size-text);
@@ -44,4 +44,10 @@ body {
 .GamingSystems {
     display: flex;
     justify-content: center;
+}
+
+@media (max-width: 720px) {
+    .NintendoStoreResponsiveImage {
+        src: url(Assets/MNS_mobile.png);
+    }
 }
