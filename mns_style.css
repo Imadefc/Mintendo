@@ -1,33 +1,48 @@
-@import url(tipografía.css);
+@font-face {
+    font-family: "Nintendo";
+    src: url(Fonts/MuseoSans_700.ttf);
+}
 
 body {
     padding: 0px;
     margin: 0px;
     width: 100%;
+    font-family: "Nintendo";
+    font-size: larger;
     color: rgb(72, 72, 72);
-    font-family: var(--nintendo-font);
-    font-weight: var(--font-weight-nintendo);
-    font-size: var(--font-size-text);
-    line-height: var(--line-text);
+    line-height: 1.4;
 }
 
 .OnlineStore {
     display: flex;
     justify-content: center;
+    align-content: center;
+    padding-top: 48px;
+    padding-bottom: 48px;
 }
 
 .NintendoStore {
-    max-width: 1200px;
+    width: 1144px;
+    max-width: 95%;
+}
+
+.SectionHeader {
+    margin: 0;
     width: fit-content;
 }
 
 .NintendoStoreResponsiveImage {
-    margin: 20px;
-    width: 60%;
+    box-sizing: border-box;
+    width: 100%;
+    height: fit-content;
+    margin-top: 36px;
+    margin-bottom: 36px;
+    border-radius: 8px;
 }
 
-.MyNintendoStoreDesktopImage {
+.MyNintendoStoreImage {
     width: 100%;
+    height: auto;
     border-radius: 8px;
     object-fit: cover;
 }
@@ -38,15 +53,48 @@ body {
     justify-content: space-between;
 }
 
+.OnlineStoreDescriptionText {
+    max-width: 940px;
+    margin-right: 36px;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 29.4px;
+}
+
 .StartShoppingButton {
     display: flex;
-    border-radius: 8px;
+    align-items: center;
+    box-sizing: border-box;
+    margin-right: ;
+    width: 169px;
+    height: 46px;
+    padding-left: 24px;
+    padding-right: 24px;
+    border-radius: 12px;
     background-color: #E60012;
-    justify-content: center;
-    padding: 10px;
     text-decoration: none;
-    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    text-wrap: nowrap;
     color: white;
+}
+
+.StartShoppingButton:hover {
+    animation-name: ButtonHover;
+    animation-duration: 0.5s;
+}
+
+@keyframes ButtonHover {
+    from {
+        width: 169px;
+        height: 46px;
+        background-color: #E60012;
+    }
+    to {
+        width: 175px;
+        height: 48px;
+        background-color: #ae000f;
+    }
 }
 
 .GamingSystems {
@@ -54,8 +102,6 @@ body {
     justify-content: center;
 }
 
-@media (max-width: 720px) {
-    .NintendoStoreResponsiveImage {
-        src: url(Assets/MNS_mobile.png);
-    }
+@media screen and (max-width: 720px) {
+    
 }
