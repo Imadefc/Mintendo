@@ -17,11 +17,19 @@ body {
 }
 
 .NintendoStore {
-    width: 100%;
+    max-width: 1200px;
+    width: fit-content;
+}
+
+.NintendoStoreResponsiveImage {
+    margin: 20px;
+    width: 60%;
 }
 
 .MyNintendoStoreDesktopImage {
+    width: 100%;
     border-radius: 8px;
+    object-fit: cover;
 }
 
 .OnlineStoreDescription {
