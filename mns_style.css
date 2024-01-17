@@ -47,6 +47,14 @@ body {
     object-fit: cover;
 }
 
+.MyNintendoStoreImageMobile {
+    display: none;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
 .OnlineStoreDescription {
     display: flex;
     align-items: center;
@@ -85,22 +93,28 @@ body {
 }
 
 @keyframes ButtonHover {
-    0% {
-        transform: scale(1);
-    }
-      50% {
-        transform: scale(1.05);
-    }
-      100% {
-        transform: scale(1.03);
-    } 
+    0%   {transform:scale(1.0)}
+    25%  {transform:scale(1.09)}
+    50%  {transform:scale(1.05)}
+    100% {transform:scale(1.09)}
 }
 
+.StartShoppingButton:hover {
+    animation: ButtonHover 0.4s linear;
+    animation-fill-mode: forwards;
+    filter: brightness(70%);
+}
 .GamingSystems {
     display: flex;
     justify-content: center;
 }
 
-@media screen and (max-width: 720px) {
-    
+@media screen and (max-width: 768px) {
+    .MyNintendoStoreImageMobile {
+        display: block;
+    }
+
+    .MyNintendoStoreImage {
+        display: none;
+    }
 }
