@@ -12,7 +12,7 @@ body {
     margin: 0px;
     width: 100%;
     font-family: "Nintendo";
-    font-size: larger;
+    font-size: large;
     color: rgb(72, 72, 72);
     line-height: 1.4;
 }
@@ -36,9 +36,7 @@ body {
 }
 
 .NintendoStoreResponsiveImage {
-    box-sizing: border-box;
     width: 100%;
-    height: fit-content;
     margin-top: 36px;
     margin-bottom: 36px;
     border-radius: 8px;
@@ -65,7 +63,7 @@ body {
     justify-content: space-between;
 }
 
-.OnlineStoreDescriptionText {
+.OnlineStoreDescriptionText, .GamingSystemsDescriptionText {
     max-width: 940px;
     margin-right: 36px;
     font-size: 21px;
@@ -76,6 +74,7 @@ body {
 .StartShoppingButton {
     display: flex;
     align-items: center;
+    justify-content: center;
     box-sizing: border-box;
     width: 169px;
     height: 46px;
@@ -91,10 +90,56 @@ body {
     overflow: visible;
 }
 
-.StartShoppingButton:hover {
-    animation-name: ButtonHover;
-    animation-duration: 0.3s;
+/*
+BELOW GAMING SYSTEMS STYLE
+*/
+
+.GamingSystems {
+    padding-top: 48px;
+    padding-bottom: 48px;
 }
+
+.GamingSystemsContent {
+    max-width: 95%;
+    margin: auto;
+    width: 1144px;
+    display: flex;
+    flex-direction: column;
+}
+
+.GamingSystemsPicture {
+    width: 100%;
+}
+
+#GamingSystemsImg {
+    width: 100%;
+    margin-top: 36px;
+    margin-bottom: 36px;
+    border-radius: 8px;
+}
+
+.GamingSystemsDescription {
+    display: flex;
+    align-items: center;
+}
+
+.ExploreGamingSystemsButton {
+    width: 169px;
+    height: 46px;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background-color: #E60012;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+/* HOVERS, ANIMATIONS AND RESPONSIVE */
 
 @keyframes ButtonHover {
     0%   {transform:scale(1.0)}
@@ -103,17 +148,39 @@ body {
     100% {transform:scale(1.09)}
 }
 
-.StartShoppingButton:hover {
+.StartShoppingButton:hover, .ExploreGamingSystemsButton:hover {
     animation: ButtonHover 0.4s linear;
     animation-fill-mode: forwards;
-    filter: brightness(70%);
+    background-color: #c20010;
 }
 .GamingSystems {
     display: flex;
     justify-content: center;
 }
 
+@media screen and (max-width: 1025px) {
+    .NintendoStoreResponsiveImage, #GamingSystemsImg {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    .OnlineStoreDescription, .GamingSystemsDescription {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .StartShoppingButton, .ExploreGamingSystemsButton {
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 768px) {
+    .OnlineStoreDescriptionText, .GamingSystemsDescriptionText {
+        
+        font-size: 18px;
+        font-weight: bolder;
+    }
+
     .MyNintendoStoreImageMobile {
         display: block;
     }
@@ -121,31 +188,4 @@ body {
     .MyNintendoStoreImage {
         display: none;
     }
-}
-
-/*
-BELOW GAMING SYSTEMS STYLE
-*/
-
-.GamingSystems {
-    max-width: 95%;
-    margin: auto;
-}
-
-.GamingSystemsContent {
-    width: 1144px;
-    display: flex;
-    flex-direction: column;
-}
-
-.GamingSystemsPicture {
-    width: 100%;
-    padding: 0;
-}
-
-.GamingSystemsImg {
-    width: 100%;
-    margin-top: 36px;
-    margin-bottom: 36px;
-    border-radius: 8px;
 }
