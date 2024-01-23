@@ -3,6 +3,10 @@
     src: url(Fonts/MuseoSans_700.ttf);
 }
 
+*{
+    box-sizing: border-box;
+}
+
 body {
     padding: 0px;
     margin: 0px;
@@ -117,4 +121,31 @@ body {
     .MyNintendoStoreImage {
         display: none;
     }
+}
+
+/*
+BELOW GAMING SYSTEMS STYLE
+*/
+
+.GamingSystems {
+    max-width: 95%;
+    margin: auto;
+}
+
+.GamingSystemsContent {
+    width: 1144px;
+    display: flex;
+    flex-direction: column;
+}
+
+.GamingSystemsPicture {
+    width: 100%;
+    padding: 0;
+}
+
+.GamingSystemsImg {
+    width: 100%;
+    margin-top: 36px;
+    margin-bottom: 36px;
+    border-radius: 8px;
 }
