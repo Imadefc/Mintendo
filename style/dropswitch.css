@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Museo Sans Rounded';
+    src: url('fonts/MuseoSansRounded300.otf') format('opentype'),
+        url('fonts/MuseoSansRounded700.otf') format('opentype');
+    font-weight: normal;  
+    font-style: normal;  
+}
+
+
 #switchContainer {
     visibility: hidden;
     display: flex;
