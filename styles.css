@@ -1,0 +1,227 @@
+@font-face {
+    font-family: 'Museo Sans Rounded';
+    src: url('fonts/MuseoSansRounded300.otf') format('opentype'),
+        url('fonts/MuseoSansRounded700.otf') format('opentype');
+    font-weight: normal;  
+    font-style: normal;  
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Museo Sans Rounded';
+    font-weight: 700;
+}
+
+.FooterHeader {
+    width: 100%;
+    padding: 36px;
+    background-color: rgb(230, 0, 18);
+}
+
+.FooterHeaderLogos {
+    display: grid;
+    align-items: center;
+    justify-items: right;
+    grid-template-columns: auto repeat(4, 58px);
+    gap: 20px;
+    width: 100%;
+}
+
+.FooterHeaderLink {
+    width: 300px;
+    justify-self: left ;
+}
+
+#FooterNintendoLogo {
+    width: 195px;
+    height: 48px;
+    fill: white;
+    margin-right: auto;
+}
+
+.FooterRRSSIcon {
+    width: 30px;
+    height: 30px;
+}
+
+#FooterFacebookLogo {
+    width: 42px;
+    height: 42px;
+}
+
+.FooterContent {
+    height: 480px;
+    width: 100%;
+}
+
+.contenedorList {
+    display: grid;
+    column-gap: 16px;
+    row-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(auto-fit, 1fr));
+}
+
+.contenedorIcon {
+    width: 95vw;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.FooterContent .headingFooter {
+    color: #484848; 
+    font-weight: bolder;
+    transition: border-bottom-color 200ms ease-in-out 25ms, color 200ms ease-in-out 25ms;
+    margin-bottom: 10px;
+}
+
+
+.FooterContent .headingFooter:hover {
+    border-bottom:rgb(146, 16, 27) 2.5px solid;
+}
+
+.contenedorList a:hover {
+    border-bottom:rgb(146, 16, 27) 2.5px solid;
+    color: rgb(146, 16, 27);
+}
+
+.FooterContentListAbout,
+.FooterContentListShop,
+.FooterContentListStore,
+.FooterContentListSuport,
+.FooterContentListParents,
+.FooterContentListCommunity,
+.FooterContentListPrivacy {
+    width: 200px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;  
+    align-items: flex-start;  
+    border-left: lightgray 1px solid;
+}
+
+.FooterContentListAbout {
+    border: none;
+}
+
+.FooterContent a {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(230, 0, 18);
+    margin-left: 15px;
+    font-size: 16px;
+    line-height: 2;
+}
+
+.FooterContentListAbout,
+.FooterContentListShop, 
+.FooterContentListStore,
+.FooterContentListSuport{
+    grid-row: span 2;
+}
+
+.FooterContentList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+
+.FooterContentListCommunity {
+    grid-column: 6;
+    grid-row: 1;
+}
+
+.FooterContentListPrivacy {
+    grid-column: 5;
+    grid-row: 2;
+}
+
+.contenedorIcon {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+    padding-right: 16px;
+}
+
+.FooterLegal {
+    display: grid;
+    grid-template-columns: 60% 30% 10%;
+    width: 100%;
+    height: 100px;
+    padding: 16px 32px;
+    background-color: rgb(45, 45, 45);
+    color: white;
+    font-size: 12px;
+}
+
+.FooterLegalInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1;
+    margin-left: -30px;
+    margin-right: 20px;
+}
+
+.FooterLegalLinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 2;
+}
+
+.FooterLegalLinks a {
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    margin-right: 15px;
+}
+
+.FooterLanguageSelection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 3;
+}
+
+.FooterLanguageSelection a{
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.FooterLegalLinks a:hover {
+    border-bottom: rgb(230, 0, 18) 1px solid;
+}
+
+#FooterLanguageSelectionUSA {
+    width: 24px;
+    height: 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+    border: white 0.5px solid
+}
+
+.lang:hover {
+    border-bottom: white 1px solid;
+}
+
+@media (max-width: 768px) {
+
+#FooterNintendoLogo {
+    margin-right: 200px;
+}
+    .contenedorList {
+        display: grid;
+        justify-content: center;
+        align-self: center;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr); 
+        width: 80%;
+    }
+}
