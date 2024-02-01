@@ -1,11 +1,4 @@
-@font-face {
-    font-family: 'Museo Sans Rounded';
-    src: url('fonts/MuseoSansRounded300.otf') format('opentype'),
-        url('fonts/MuseoSansRounded700.otf') format('opentype');
-    font-weight: normal;  
-    font-style: normal;  
-}
-
+@import url(fonts.css);
 
 *{ 
     padding: 0;
@@ -13,9 +6,9 @@
     color: #484848;
     line-height: 1.4;
     font-size: 14px; 
-    font-weight: 700;
     cursor: pointer;
-    font-family: 'Museo Sans Rounded', sans-serif;
+    font-family: 'Museo Sans Rounded 700';
+    font-weight: 600;
 }
 
 nav{
@@ -23,13 +16,14 @@ nav{
     top: 0px;
     width: 100%;
     z-index: 1000; 
-
 }
 
-.topDownItems svg {
+.topDownItems #down {
     padding-left: 4px;
     padding-right: 4px;
     transition: all 200ms ease-in-out 0s;
+    width: 16px;
+    height: 16px;
 }
 
 .topDownItems{
@@ -42,8 +36,7 @@ nav{
     background-color: rgb(255, 255, 255);
     z-index: 1;
     gap: 1rem;
-    padding: 2px 0px 0px 0px;
-    transition: all 200ms ease-in-out 0s;
+    padding-top: 2px;
     width: 100%;
 }
 
@@ -66,7 +59,15 @@ nav{
     align-items: center;
     border: none;
     background: transparent;
-    
+}
+
+#dropdownstore span,
+#dropdownnews span,
+#dropdowngames span,
+#dropdownswitch span,
+#dropdownplay span{
+    transition: all 200ms ease-in-out 0s;
+    margin-right: 5px;
 }
 
 #dropdownnews,
@@ -85,20 +86,31 @@ nav{
     background: transparent;
 }
 
+
+#dropdownnews:hover #down path,
+#dropdownplay:hover #down path,
+#dropdownswitch:hover #down path,
+#dropdowngames:hover #down path,
+#dropdownstore:hover #down path {
+    fill: rgb(230, 0, 18);
+    transition: all 200ms ease-in-out 0s;
+}
+
 #dropdownstore:hover span,
 #dropdowngames:hover span,
 #dropdownswitch:hover span, 
 #dropdownnews:hover span,
 #dropdownplay:hover span{
     color: rgb(230, 0, 18);
+    transition: all 200ms ease-in-out 0s;
 }
 
-#dropdownnews:hover svg path,
-#dropdownplay:hover svg path,
-#dropdownswitch:hover svg path,
-#dropdowngames:hover svg path,
-#dropdownstore:hover svg path {
+#dropdowngames:hover #downchevrongames path, 
+#dropdownplay:hover #downchevronplay path,
+#dropdownswitch:hover #downchevronswitch path,
+#dropdownstore:hover #downchevronstore path{
     fill: rgb(230, 0, 18);
+    transition: all 200ms ease-in-out 0s;
 }
 
 

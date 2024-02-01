@@ -1,11 +1,3 @@
-@font-face {
-    font-family: 'Museo Sans Rounded';
-    src: url('fonts/MuseoSansRounded300.otf') format('opentype'),
-        url('fonts/MuseoSansRounded700.otf') format('opentype');
-    font-weight: normal;  
-    font-style: normal;  
-}
-
 
 #switchContainer {
     visibility: hidden;
@@ -32,15 +24,15 @@
     padding-top: 5px;
 }
 
-.switchcloseContainer svg {
+.switchcloseContainer #close {
     padding: 0px 20px 0px 0px;
 }
 
-.switchcloseContainer svg path{
+.switchcloseContainer #close path{
     color: rgb(200, 200, 200);
 }
 
-.switchcloseContainer:hover svg path{
+.switchcloseContainer:hover #close path{
     color: #484848;
 }
 
@@ -104,14 +96,14 @@
     width: 118px;
 }
 
-.servicesvgContainer svg {
+.servicesvgContainer #switch {
     width: 45px;
     height: 45px;
     padding: 0px;
     pointer-events: auto;
 }
 
-.servicesvgContainer svg path {
+.servicesvgContainer #switch path {
     color:  rgb(230, 0, 18);
 }
 
@@ -140,6 +132,7 @@
     width: 120px;
     margin-left: 3px;
     text-align: center;
+    font-family: 'Museo Sans Rounded 300';
     font-weight: 300;
 }
 
@@ -148,6 +141,7 @@
     width: 200px;
     margin-left: 30px;
     text-align: center;
+    font-family: 'Museo Sans Rounded 300';
     font-weight: 300;
 }
 
@@ -172,6 +166,6 @@
     height: 72px;
 }
 
-.comparesvgContainer:hover svg path{ 
+.comparesvgContainer:hover #sys path{ 
     fill: rgb(255, 255, 255);
 }

@@ -1,11 +1,4 @@
-@font-face {
-    font-family: 'Museo Sans Rounded';
-    src: url('fonts/MuseoSansRounded300.otf') format('opentype'),
-        url('fonts/MuseoSansRounded700.otf') format('opentype');
-    font-weight: normal;  
-    font-style: normal;  
-}
-
+@import url(fonts.css);
 
 header{
     display: flex;
@@ -65,10 +58,10 @@ header{
     padding-right: 115px;
 }
 
-
 .searchTitle {
     padding-top: 4px;
     color: rgb(114, 114, 114);
+    font-family: 'Museo Sans Rounded 300';
     font-weight: 300;
     padding-left: 12px;
 }
@@ -211,14 +204,14 @@ header{
 .buttonLinkSupport:hover span,
 .buttonLinkWishlist:hover span,
 .buttonLinkCart:hover span,
-.linksignup:hover span {
+#linksignup:hover span {
     color: rgb(230, 0, 18);
 }
 
 .buttonLinkSupport:hover .svg path,
 .buttonLinkWishlist:hover .svg path, 
 .buttonLinkCart:hover .svg path,
-.linksignup:hover .svg path{
+#linksignup:hover .svg path{
     fill: rgb(230, 0, 18);
 }
 
